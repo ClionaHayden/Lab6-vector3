@@ -35,5 +35,29 @@ std::string MyVector3::toString()
 	return output;	
 }
 
+MyVector3::MyVector3(double x, double y, double z)
+{
+}
+
+MyVector3::MyVector3(sf::Vector3f t_sfVector) :
+	x{ static_cast <float> (x) },
+	y{ static_cast <float> (y) },
+	z{ static_cast <float> (z) }
+
+{
+
+}
+
+MyVector3::MyVector3(sf::Vector3i t_sfVector) 
+{
+	t_sfVector.x = (int)t_sfVector.x;
+	t_sfVector.y = (int)t_sfVector.y;
+	t_sfVector.z = (int)t_sfVector.z;
+}
+
+
+
+
+
 
 

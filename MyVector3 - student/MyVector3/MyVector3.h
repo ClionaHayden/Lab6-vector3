@@ -22,9 +22,9 @@ public:
 	std::string toString();
 
 
-	//MyVector3(double x, double y, double z);
-	//MyVector3(sf::Vector3f t_sfVector);
-	//MyVector3(sf::Vector3i t_sfVector);
+	MyVector3(double x, double y, double z);
+	MyVector3(sf::Vector3f t_sfVector);
+	MyVector3(sf::Vector3i t_sfVector);
 	//MyVector3(sf::Vector2i t_sfVector);
 	//MyVector3(sf::Vector2u t_sfVector);
 	//MyVector3(sf::Vector2f t_sfVector); 
@@ -57,11 +57,11 @@ public:
 	//MyVector3 rejection(const MyVector3 t_other)const;
 
 
-	//operator sf::Vector2f() { return sf::Vector2f{ }; }; 
-	//operator sf::Vector2i() { return sf::Vector2i{ }; };	
-	//operator sf::Vector2u() { return sf::Vector2u{ }; };
-	//operator sf::Vector3i() { return sf::Vector3i{ }; };
-	//operator sf::Vector3f() { return sf::Vector3f{ }; };
+	operator sf::Vector2f() { return sf::Vector2f{ }; }; 
+	operator sf::Vector2i() { return sf::Vector2i{ }; };	
+	operator sf::Vector2u() { return sf::Vector2u{ }; };
+	operator sf::Vector3i() { return sf::Vector3i{ (int)x,(int)y,(int)z }; };
+	operator sf::Vector3f() { return sf::Vector3f{ (float)x,(float)y,(float)z}; };
 	
 };
 
