@@ -1,8 +1,9 @@
 /// <summary>
 /// Cliona Hayden
-/// estimate
-/// time spent
-/// issues
+/// C00225401
+/// estimate: 5 hours
+/// time spent: 7 hours
+/// issues: normalisation incorrect - only x coordinate correct
 /// 
 /// </summary>
 #ifdef _DEBUG 
@@ -148,7 +149,7 @@ int main()
 	std::cout << "length" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
-	// length squared o a vector
+	// length squared of a vector
 	vectorThree = { 4.0, -3.4, 5.789 };
 
 	length = vectorThree.lengthSquared();
@@ -157,6 +158,90 @@ int main()
 	std::cout << "61.0725209999999942428783142161" << std::endl;
 	std::cout << "length" << std::endl;
 	std::cout << "----------------------------" << std::endl;
+
+	// dot poduct of two vectors
+	vectorThree = { 4.0, -3.4, 5.789 };
+	vectorOne = { -3.0, 10.66, 5.4 };
+
+	double dot = vectorThree.dot(vectorOne);
+
+	std::cout << dot << std::endl;
+	std::cout << "-16.9834 " << std::endl;
+	std::cout << "dot product" << std::endl;
+	std::cout << "----------------------------" << std::endl;
+
+	// cross product of two vectors
+
+	vectorOne = { -3.0, 10.66, 5.4 };
+	vectorTwo = { 4.0, -3.4, 5.789 };
+
+	vectorThree = vectorOne.crossProduct(vectorTwo);
+
+	std::cout << vectorThree.toString() << std::endl;
+	std::cout << "{ 80.07074, 38.967, -32.44}" << std::endl;
+	std::cout << "cross product" << std::endl;
+	std::cout << "----------------------------" << std::endl;
+
+	// angle between two 3d vectors
+
+	vectorOne = { -3.0, 10.66, 5.4 };
+	vectorTwo = { 4.0, -3.4, 5.789 };
+
+	double angle = vectorOne.angleBetween(vectorTwo);
+
+	std::cout << angle << std::endl;
+	std::cout << "100.15951424 " << std::endl;
+	std::cout << "angle between" << std::endl;
+	std::cout << "----------------------------" << std::endl;
+
+
+	// unit vector 
+
+	vectorOne = { -3.0, 10.66, 5.4 };
+
+	vectorThree = vectorOne.unit();
+
+	std::cout << vectorThree.toString() << std::endl;
+	std::cout << "{-0.24349590573057928, 0.8652221183626584, 0.43829263031504273}" << std::endl;
+	std::cout << " unit vector" << std::endl;
+	std::cout << "----------------------------" << std::endl;
+
+
+	// normalise (ths is wrong - only x coordinate correct)
+
+	vectorOne = { -6.0, 10.6, 15.4 };
+
+	vectorOne.normalise();
+
+	std::cout << vectorOne.toString() << std::endl;
+	std::cout << "{-0.30558201742124624, 0.5398615641108684, 0.7843271780478654}" << std::endl;
+	std::cout << "normalise" << std::endl;
+	std::cout << "----------------------------" << std::endl;
+
+	// projection
+
+	vectorOne = { -3.0, 10.66, 5.4 };
+	vectorTwo = { 4.0, -3.4, 5.789 };
+
+	vectorThree = vectorTwo.projection(vectorOne);
+
+	std::cout << vectorThree.toString() << std::endl;
+	std::cout << "{-1.112, 0.945, -1.61}" << std::endl;
+	std::cout << "projection" << std::endl;
+	std::cout << "----------------------------" << std::endl;
+
+	// rejection
+	vectorOne = { -3.0, 10.66, 5.4 };
+	vectorTwo = { 4.0, -3.4, 5.789 };
+
+	vectorThree = vectorTwo.rejection(vectorOne);
+
+	std::cout << vectorThree.toString() << std::endl;
+	std::cout << "{4.278, -3.121, 6.067}" << std::endl;
+	std::cout << "rejection" << std::endl;
+	std::cout << "----------------------------" << std::endl;
+
+	std::cout << std::endl;
 
 	std::system("pause");
 	return EXIT_SUCCESS;

@@ -8,6 +8,7 @@
 
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <math.h>
 
 
 class MyVector3
@@ -46,14 +47,14 @@ public:
 
 	double length()const;
 	double lengthSquared()const;
-	//double dot(const MyVector3 t_other) const;
-	//MyVector3 crossProduct(const MyVector3 t_other)const;
-	//double angleBetween(const MyVector3 t_other)const;
-	//MyVector3 unit() const;
-	//void normalise();
-	//MyVector3 projection(const MyVector3 t_other)const;
-	// projection of other onto the current vector so answer will parralell to current vector.
-	//MyVector3 rejection(const MyVector3 t_other)const;
+	double dot(const MyVector3 t_other) const;
+	MyVector3 crossProduct(const MyVector3 t_other)const;
+	double angleBetween(const MyVector3 t_other)const;
+	MyVector3 unit() const;
+	void normalise();
+	MyVector3 projection(const MyVector3 t_other)const;
+	// projection of other onto the current vector so answer will parellel to current vector.
+	MyVector3 rejection(const MyVector3 t_other)const;
 
 
 	operator sf::Vector2f() { return sf::Vector2f{ }; }; 
