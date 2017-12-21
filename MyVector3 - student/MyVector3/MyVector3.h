@@ -23,7 +23,7 @@ public:
 	std::string toString();
 
 
-	MyVector3(double x, double y, double z);
+	MyVector3(double t_x, double t_y, double t_z);
 	MyVector3(sf::Vector3f t_sfVector);
 	MyVector3(sf::Vector3i t_sfVector);
 	MyVector3(sf::Vector2i t_sfVector);

@@ -157,6 +157,7 @@ MyVector3 MyVector3::operator/(const double t_divisor) const
 		double zValue = z / t_divisor;
 		return { xValue, yValue, zValue };
 	}
+	// return original vector if divisor is 0 
 	else
 	{
 		return { x,y,z };
@@ -242,11 +243,12 @@ MyVector3 MyVector3::unit() const
 }
 
 // changes the values of the vector so it has a magnitude of 1
-void MyVector3::normalise() // wrong
+void MyVector3::normalise() 
 {
-	x /= length();
-	y /= length();
-	z /= length();
+	double magnitude = sqrt((x * x) + (y * y) + (z * z)); // length formula
+	x /= magnitude;
+	y /= magnitude;
+	z /= magnitude;
 }
 
 // returns the coordinates of one vector projected onto another

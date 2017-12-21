@@ -3,7 +3,7 @@
 /// C00225401
 /// estimate: 5 hours
 /// time spent: 7 hours
-/// issues: normalisation incorrect - only x coordinate correct
+/// issues: none
 /// 
 /// </summary>
 #ifdef _DEBUG 
@@ -76,7 +76,7 @@ int main()
 	vectorThree = (vectorOne - vectorTwo);
 
 	std::cout << vectorThree.toString() << std::endl;
-	std::cout << "{ 1 , 7.66 , -4.6}" << std::endl;
+	std::cout << "{1 , 7.66 , -4.6}" << std::endl;
 	std::cout << " - operator" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -87,7 +87,7 @@ int main()
 	vectorThree = vectorOne * 4;
 
 	std::cout << vectorThree.toString() << std::endl;
-	std::cout << "{ -12 , 42.64 , 21.6}" << std::endl;
+	std::cout << "{-12 , 42.64 , 21.6}" << std::endl;
 	std::cout << " * operator" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -98,7 +98,7 @@ int main()
 	vectorThree = vectorOne / 2.5;
 
 	std::cout << vectorThree.toString() << std::endl;
-	std::cout << "{ -1.2 , 4.264 , 2.16}" << std::endl;
+	std::cout << "{-1.2 , 4.264 , 2.16}" << std::endl;
 	std::cout << " / operator" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -110,7 +110,7 @@ int main()
 	vectorThree += vectorOne;
 
 	std::cout << vectorThree.toString() << std::endl;
-	std::cout << "{ 1 , 7.26 , 11.189}" << std::endl;
+	std::cout << "{1 , 7.26 , 11.189}" << std::endl;
 	std::cout << " += operator" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -122,7 +122,7 @@ int main()
 	vectorThree -= vectorOne;
 
 	std::cout << vectorThree.toString() << std::endl;
-	std::cout << "{ 7 , -14.06 , 0.389}" << std::endl;
+	std::cout << "{7 , -14.06 , 0.389}" << std::endl;
 	std::cout << " -= operator" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -133,7 +133,7 @@ int main()
 	vectorThree =  -vectorThree;
 
 	std::cout << vectorThree.toString() << std::endl;
-	std::cout << "{ -4 , 3.4 , -5.789}" << std::endl;
+	std::cout << "{-4 , 3.4 , -5.789}" << std::endl;
 	std::cout << " - operator (negative)" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -178,7 +178,7 @@ int main()
 	vectorThree = vectorOne.crossProduct(vectorTwo);
 
 	std::cout << vectorThree.toString() << std::endl;
-	std::cout << "{ 80.07074, 38.967, -32.44}" << std::endl;
+	std::cout << "{80.07074, 38.967, -32.44}" << std::endl;
 	std::cout << "cross product" << std::endl;
 	std::cout << "----------------------------" << std::endl;
 
@@ -207,7 +207,7 @@ int main()
 	std::cout << "----------------------------" << std::endl;
 
 
-	// normalise (ths is wrong - only x coordinate correct)
+	// normalise 
 
 	vectorOne = { -6.0, 10.6, 15.4 };
 
